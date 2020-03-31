@@ -44,4 +44,7 @@ Pusha för att få backup.
 ### Beskrivning
 En fanpage-sajt om filmer som handlar om tidsresor. 
 
+Början på mobilsida:
+https://www.figma.com/file/P0aTwib0D8MlOOvygH8CUG/Slutprojekt?node-id=0%3A1 
+
 
