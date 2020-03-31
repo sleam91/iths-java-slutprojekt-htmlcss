@@ -40,3 +40,8 @@ Pusha för att få backup.
 
 ### Deployment
 1. Aktivera github pages under settings på ditt repo på github.com
+
+### Beskrivning
+En fanpage-sajt om filmer som handlar om tidsresor. 
+
+
