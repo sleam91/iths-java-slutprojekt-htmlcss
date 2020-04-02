@@ -1,0 +1,59 @@
+@mixin flex-space-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body {
+    background-image: url("../img/clock-small.jpg");
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    @include flex-space-center;
+    padding: 0 1rem;
+    height: 58px;
+
+    background: linear-gradient(180deg, rgba(20, 30, 82, 0.63) 0%, rgba(255, 255, 255, 0) 100%), #85CFB4;
+    a {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 26px;
+
+        color: #3113a7;
+        text-decoration: none;
+    }
+    a.desktop {
+        display: none;
+    }
+
+    a.mobile-button {
+        display: block;
+
+        img {
+            width: 2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 481px) {
+    body {
+        background-image: url("../img/clock-large.jpg");
+    }
+    nav {
+        a.desktop {
+            display: block;
+        }
+
+        a.mobile-button {
+            display: none;
+        }
+    }
+}
