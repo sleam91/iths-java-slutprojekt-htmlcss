@@ -50,7 +50,7 @@ header {
     font-family: "Rosarivo", serif;
     margin: 0;
     transform: skewX(-5deg);
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     color: #0e5c1f;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
@@ -115,10 +115,15 @@ aside {
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-evenly; }
   aside h1 {
     font-size: 1.75rem;
     color: #22343a; }
+  aside .search .search-input {
+    width: 65%;
+    background: lightgrey right/contain no-repeat url(../img/search-outline.svg); }
+  aside .search input[type="submit"] {
+    display: none; }
   aside .ads img {
     width: 100%;
     padding: 2rem 0; }
@@ -143,7 +148,7 @@ footer {
   nav a.mobile-button {
     display: none; }
   .container {
-    padding: 0 1rem;
+    padding: 0 2rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr) 0.5fr;
     grid-template-areas: "header header header sidebar sidebar" "main main main sidebar sidebar" "footer footer footer sidebar sidebar"; }
@@ -161,8 +166,11 @@ footer {
     main .section-links,
     main h1 {
       grid-column: auto / span 2; }
-  aside {
-    min-width: 150px; }
+  aside .search .search-input {
+    background: lightgray; }
+  aside .search input[type="submit"] {
+    display: inline-block;
+    margin-top: 5px; }
   footer {
     padding: 0 1rem;
     flex-direction: row;
