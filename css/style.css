@@ -56,7 +56,6 @@ header {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
 
 main {
-  order: 1;
   grid-area: main;
   background: rgba(185, 163, 163, 0.89);
   max-width: 1000px;
@@ -65,22 +64,28 @@ main {
   gap: 1rem;
   padding-bottom: 5rem;
   font-family: "Roboto", sans-serif; }
-  main .section-links {
-    border-radius: 5%;
+  main .main-info {
+    border-radius: 1rem;
     grid-column: auto / span 1;
     padding: 0 2rem 2rem;
     margin: 5rem 3rem 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background: rgba(117, 98, 98, 0.623);
     text-align: center; }
-    main .section-links h1 {
+    main .main-info img {
+      border-radius: 10%/15%;
+      max-width: 300px;
+      object-fit: cover;
+      width: 100%; }
+    main .main-info h1 {
       padding: 0; }
-    main .section-links h2 {
+    main .main-info h2 {
       margin-top: 0; }
-      main .section-links h2 a {
+      main .main-info h2 a {
         color: rgba(56, 56, 77, 0.877); }
-      main .section-links h2 :hover {
+      main .main-info h2 :hover {
         text-decoration: underline; }
   main h1 {
     grid-column: auto / span 1;
@@ -115,21 +120,25 @@ aside {
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; }
+  justify-content: flex-start;
+  gap: 1rem; }
   aside h1 {
     font-size: 1.75rem;
     color: #22343a; }
-  aside .search .search-input {
-    width: 65%;
-    background: lightgrey right/contain no-repeat url(../img/search-outline.svg); }
-  aside .search input[type="submit"] {
-    display: none; }
+  aside .search {
+    padding-bottom: 1rem; }
+    aside .search .search-input {
+      width: 65%;
+      background: lightgrey right/contain no-repeat url(../img/search-outline.svg); }
+    aside .search input[type="submit"] {
+      display: none; }
   aside .ads img {
+    border-radius: 30px / 60px;
     width: 100%;
     padding: 2rem 0; }
 
 footer {
-  order: 1;
+  font-size: medium;
   grid-area: footer;
   padding: 5rem 1rem;
   background: rgba(196, 196, 196, 0.753);
@@ -151,6 +160,7 @@ footer {
     padding: 0 2rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr) 0.5fr;
+    grid-template-rows: minmax(200px, 300px) auto minmax(150px, 300px);
     grid-template-areas: "header header header sidebar sidebar" "main main main sidebar sidebar" "footer footer footer sidebar sidebar"; }
   main {
     grid-template-columns: repeat(2, 1fr); }
@@ -163,7 +173,7 @@ footer {
     main .movie:nth-of-type(6) {
       position: relative;
       left: 50%; }
-    main .section-links,
+    main .main-info,
     main h1 {
       grid-column: auto / span 2; }
   aside .search .search-input {
@@ -190,6 +200,6 @@ footer {
     main .movie:nth-of-type(6) {
       position: relative;
       left: 0; }
-    main .section-links,
+    main .main-info,
     main h1 {
       grid-column: auto / span 3; } }

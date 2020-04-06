@@ -77,7 +77,6 @@ header {
 }
 
 main {
-    order: 1;
     grid-area: main;
     background: rgba(185, 163, 163, 0.89);
     max-width: 1000px;
@@ -87,15 +86,22 @@ main {
     padding-bottom: 5rem;
     font-family: "Roboto", sans-serif;
 
-    .section-links {
+    .main-info {
         // border: 1rem solid rgba(143, 136, 146, 0.856);
-        border-radius: 5%;
+        border-radius: 1rem;
         grid-column: auto / span 1;
         padding: 0 2rem 2rem;
         margin: 5rem 3rem 0;
         display: flex;
         flex-direction: column;
+        align-items: center;
         background: rgba(117, 98, 98, 0.623);
+        img {
+            border-radius: 10%/15%;
+            max-width: 300px;
+            object-fit: cover;
+            width: 100%;
+        }
 
         text-align: center;
         h1 {
@@ -152,13 +158,15 @@ aside {
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 1rem;
     h1 {
         font-size: 1.75rem;
         color: rgb(34, 52, 58);
     }
 
     .search {
+        padding-bottom: 1rem;
         .search-input {
             width: 65%;
             background: lightgrey right/ contain no-repeat url(../img/search-outline.svg);
@@ -169,6 +177,7 @@ aside {
     }
     .ads {
         img {
+            border-radius: 30px / 60px;
             width: 100%;
             padding: 2rem 0;
         }
@@ -176,7 +185,7 @@ aside {
 }
 
 footer {
-    order: 1;
+    font-size: medium;
     grid-area: footer;
     padding: 5rem 1rem;
     background: rgba(196, 196, 196, 0.753);
@@ -189,6 +198,7 @@ footer {
 
 @media screen and (min-width: 481px) {
     header {
+        // max-height: 300px;
         h1 {
             font-size: 3rem;
         }
@@ -210,6 +220,7 @@ footer {
         padding: 0 2rem;
         display: grid;
         grid-template-columns: repeat(4, 1fr) 0.5fr;
+        grid-template-rows: minmax(200px, 300px) auto minmax(150px, 300px);
         grid-template-areas:
             "header header header sidebar sidebar"
             "main main main sidebar sidebar"
@@ -230,7 +241,7 @@ footer {
             position: relative;
             left: 50%;
         }
-        .section-links,
+        .main-info,
         h1 {
             grid-column: auto / span 2;
         }
@@ -273,7 +284,7 @@ footer {
             left: 0;
         }
 
-        .section-links,
+        .main-info,
         h1 {
             grid-column: auto / span 3;
         }
