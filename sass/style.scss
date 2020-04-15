@@ -35,10 +35,11 @@ nav {
         line-height: 26px;
 
         color: #3113a7;
+        &:hover {
+            color: #1353a7;
+        }
     }
-    a:hover {
-        color: #1353a7;
-    }
+
     a.desktop {
         display: none;
     }
@@ -197,8 +198,7 @@ footer {
     .backtotop {
         text-align: center;
         padding: 0 0 2rem;
-        
-        
+
         .arrow {
             display: inline-block;
             font-family: "Times New Roman", Times, serif;
@@ -207,7 +207,7 @@ footer {
             color: rgb(22, 28, 29);
         }
 
-        p{
+        p {
             margin: 0;
             margin-top: -1.1rem;
             font-size: 1.5rem;
@@ -215,102 +215,4 @@ footer {
         }
     }
 }
-
-@media screen and (min-width: 481px) {
-    header {
-        // max-height: 300px;
-        h1 {
-            font-size: 3rem;
-        }
-    }
-    body {
-        background-image: url("../img/clock-large.jpg");
-    }
-    nav {
-        a.desktop {
-            display: block;
-        }
-
-        a.mobile-button {
-            display: none;
-        }
-    }
-
-    .container {
-        padding: 0 2rem;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr) 0.5fr;
-        grid-template-rows: minmax(200px, 300px) auto minmax(150px, 300px);
-        grid-template-areas:
-            "header header header sidebar sidebar"
-            "main main main sidebar sidebar"
-            "footer footer footer sidebar sidebar";
-    }
-
-    main {
-        grid-template-columns: repeat(2, 1fr);
-        .movie {
-            margin: 0;
-            img {
-                width: 100%;
-                border-radius: 0;
-            }
-        }
-        .movie:nth-of-type(3),
-        .movie:nth-of-type(6) {
-            position: relative;
-            left: 50%;
-        }
-        .main-info,
-        h1 {
-            grid-column: auto / span 2;
-        }
-    }
-
-    aside {
-        .search .search-input {
-            background: lightgray;
-        }
-        .search input[type="submit"] {
-            display: inline-block;
-            margin-top: 5px;
-        }
-    }
-
-    footer {
-        padding: 0 1rem;
-        flex-direction: row;
-        justify-content: space-around;
-        .share,
-        .about {
-            max-width: 40%;
-        }
-
-        .backtotop{
-            display: none;
-        }
-    }
-}
-@media screen and (min-width: 1024px) {
-    header {
-        h1 {
-            font-size: 4rem;
-        }
-    }
-    .container {
-        padding: 0 8rem;
-    }
-    main {
-        grid-template-columns: repeat(3, 1fr);
-        .movie:nth-of-type(3),
-        .movie:nth-of-type(6) {
-            position: relative;
-            left: 0;
-        }
-
-        .main-info,
-        h1 {
-            grid-column: auto / span 3;
-        }
-    }
-}
+@import '_desktop';

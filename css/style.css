@@ -26,8 +26,8 @@ nav {
     font-size: 22px;
     line-height: 26px;
     color: #3113a7; }
-  nav a:hover {
-    color: #1353a7; }
+    nav a:hover {
+      color: #1353a7; }
   nav a.desktop {
     display: none; }
   nav a.mobile-button {
